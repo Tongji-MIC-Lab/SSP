@@ -4,14 +4,14 @@ uname -a
 #env
 date
 
-DATASET=refcoco
+DATASET=refcoco+
 DATA_PATH=datasets
-REFER_PATH=refcoco
+REFER_PATH=refcoco+
 BERT_PATH=pretrained_weights/bert-base-uncased/
 MODEL=srun
 SWIN_TYPE=base
 IMG_SIZE=448
-ROOT_PATH=SRUN_Output
+ROOT_PATH=SRUN_output_refcoco+
 RESUME_PATH=${ROOT_PATH}/model_best_${DATASET}.pth
 OUTPUT_PATH=${ROOT_PATH}/${DATASET}
 SPLIT=testB

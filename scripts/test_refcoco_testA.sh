@@ -14,9 +14,9 @@ IMG_SIZE=448
 ROOT_PATH=SRUN_Output
 RESUME_PATH=${ROOT_PATH}/model_best_${DATASET}.pth
 OUTPUT_PATH=${ROOT_PATH}/${DATASET}
-SPLIT=testB
+SPLIT=testA
 
-CUDA_VISIBLE_DEVICES=1 python eval.py --model ${MODEL} --swin_type ${SWIN_TYPE} \
+CUDA_VISIBLE_DEVICES=0,1,2 python eval.py --model ${MODEL} --swin_type ${SWIN_TYPE} \
         --dataset ${DATASET} --split ${SPLIT} \
         --img_size ${IMG_SIZE} --resume ${RESUME_PATH} \
         --bert_tokenizer ${BERT_PATH} --ck_bert ${BERT_PATH} \
